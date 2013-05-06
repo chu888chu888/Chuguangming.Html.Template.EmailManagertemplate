@@ -1,0 +1,48 @@
+<html>
+<head>
+<link href="images/zh-cn/globle_v1.css" rel="stylesheet" type="text/css">
+<link href="images/zh-cn/skin_blue.css" rel="stylesheet" type="text/css" id="lnkSkin" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+function clickMenu(li) {
+	var ul = document.getElementById('ulSysFolder');
+	for(i=0;i<ul.childNodes.length;i++) {
+		ul.childNodes.item(i).className = 'Fld_Inbox';
+	}
+	li.className = 'Fld_Inbox On';
+}
+</script>
+</head>
+<body class="SidebarBdWp">
+<div class="SidebarWp">
+  <div class="SidebarThemeWp">
+    <div class="SidebarWpInner">
+      <table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" class="tbSB">
+        <tr>
+          <td class="tbSbTop"><h1 class="BigBtnWp"><a href="box.html" target="foldmain" title="收信" id="lnkInbox" class="aShouXIN"><b>收信</b></a><a href="#" title="写信" class="aXieXIN"><b>写信</b></a></h1></td>
+        </tr>
+        <tr>
+          <td class="tbSbMid"><div class="Sb_ConWp">
+              <div class="Sb_ConWpIn">
+                <div class="PanelWp Panel_Fld">
+                  <div class="PanelCon" id="dvSysFolder">
+                    <ul id="ulSysFolder">
+                      <li class="Fld_Inbox" onClick="clickMenu(this);"><b class="icoFld"></b><a href="box.html" target="foldmain" title="收件箱" id="lnk1" class="fileItem" onFocus="this.blur();"><span class="JQ">收件箱</span></a>&nbsp;</li>
+                      <li class="Fld_Inbox" onClick="clickMenu(this);"><b class="icoFld"></b><a href="box.html" target="foldmain" title="垃圾邮件" id="lnk5" class="fileItem" onFocus="this.blur();"><span class="JQ">垃圾邮件</span></a>&nbsp; <span class="Extra">[<a href="#" title="清空">清空</a>]</span> </li>
+                      <li class="Fld_Inbox" onClick="clickMenu(this);"><b class="icoFld"></b><a href="box.html" target="foldmain" title="已接收邮件" id="lnk200000" class="fileItem" onFocus="this.blur();"><span class="JQ">已接收邮件</span></a>&nbsp;</li>
+                      <li class="Fld_Inbox" onClick="clickMenu(this);"><b class="icoFld"></b><a href="box.html" target="foldmain" title="草稿箱" id="lnk2" class="fileItem" onFocus="this.blur();"><span class="JQ">草稿箱</span></a>&nbsp;</li>
+                      <li class="Fld_Inbox" onClick="clickMenu(this);"><b class="icoFld"></b><a href="box.html" target="foldmain" title="已发送邮件" id="lnk3" class="fileItem" onFocus="this.blur();"><span class="JQ">已发送邮件</span></a>&nbsp;</li>
+                      <li class="Fld_Inbox" onClick="clickMenu(this);"><b class="icoFld"></b><a href="box.html" target="foldmain" title="垃圾箱" id="lnk4" class="fileItem" onFocus="this.blur();"><span class="JQ">垃圾箱</span></a>&nbsp; <span class="Extra">[<a href="javascript:void(0)" title="清空" >清空</a>]</span> </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="Sb_Line"></div>
+              </div>
+            </div></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>收件箱</title>
+<link href="images/zh-cn/globle_v1.css" rel="stylesheet" type="text/css">
+<link href="images/zh-cn/inbox.css" rel="stylesheet" type="text/css">
+<link href="images/zh-cn/skin_blue.css" rel="stylesheet" type="text/css" id="lnkSkin" />
+</head>
+<body class="All_C_Page Inbox">
+<form id="oFormMessage" method="post" action="">
+  <div class="ContentWp">
+    <div class="ContentThemeWp">
+      <div class="gTitle"> <b class="mTT"> </b> &nbsp;&nbsp;(共&nbsp;<b id="oTotal">25</b>&nbsp;封，其中&nbsp;<a title="" href="#">未读邮件</a>&nbsp;<b class="fnt_Red" id="oTotalUnRead">0</b>&nbsp;封)</div
+ 
+  >
+  
+      <div class="gToolbar gTbrTop">
+        <input type="button" class="Btn BtnNml ImpBtn" value="删 除"/>
+        <input type="button" class="Btn BtnNml" value="举报垃圾邮件"/>
+        <select class="Sel">
+          <option value="none" selected="true">标记为...</option>
+          <option value="read:true">&nbsp;&nbsp;已读邮件</option>
+          <option value="read:false">&nbsp;&nbsp;未读邮件</option>
+          <option value="none" class="SelOptLine">-------------</option>
+          <option value="priority:1">&nbsp;&nbsp;紧急邮件</option>
+          <option value="priority:3">&nbsp;&nbsp;普通邮件</option>
+          <option value="priority:5">&nbsp;&nbsp;缓慢邮件</option>
+          <option value="none" class="SelOptLine">-------------</option>
+          <option value="label0:1" class="fnt_Mark1">&nbsp;&nbsp;重要邮件</option>
+          <option value="label0:2" class="fnt_Mark2">&nbsp;&nbsp;公司邮件</option>
+          <option value="label0:3" class="fnt_Mark3">&nbsp;&nbsp;业务邮件</option>
+          <option value="label0:4" class="fnt_Mark4">&nbsp;&nbsp;资讯邮件</option>
+          <option value="label0:5" class="fnt_Mark5">&nbsp;&nbsp;亲友邮件</option>
+          <option value="label0:6" class="fnt_Mark6">&nbsp;&nbsp;同学邮件</option>
+          <option value="label0:7" class="fnt_Mark7">&nbsp;&nbsp;休闲邮件</option>
+          <option value="label0:8" class="fnt_Mark8">&nbsp;&nbsp;趣闻邮件</option>
+          <option value="label0:15" class="fnt_Mark15">&nbsp;&nbsp;杂项邮件</option>
+          <option value="none" class="SelOptLine">-------------</option>
+          <option value="label0:0">&nbsp;&nbsp;取消标签</option>
+        </select>
+        <select class="Sel">
+          <option value="none" selected="true">移动到...</option>
+          <option value="1">&nbsp;&nbsp;收件箱</option>
+          <option value="5">&nbsp;&nbsp;垃圾邮件</option>
+          <option value="200000">&nbsp;&nbsp;已接收邮件</option>
+          <option value="2">&nbsp;&nbsp;草稿箱</option>
+          <option value="3">&nbsp;&nbsp;已发送邮件</option>
+          <option value="4">&nbsp;&nbsp;垃圾箱</option>
+          <option value="none" class="SelOptLine">-------------</option>
+        </select>
+        <select class="Sel">
+          <option value="none" selected="true">查看...</option>
+          <option value="null">&nbsp;&nbsp;全部邮件</option>
+          <option value="none" class="SelOptLine">-------------</option>
+          <option value="read:false">&nbsp;&nbsp;未读邮件</option>
+          <option value="read:true">&nbsp;&nbsp;已读邮件</option>
+          <option value="replied:true">&nbsp;&nbsp;已回复</option>
+          <option value="forwarded:true">&nbsp;&nbsp;已转发</option>
+          <option value="none" class="SelOptLine">-------------</option>
+          <option value="priority:high">&nbsp;&nbsp;紧急邮件</option>
+          <option value="priority:normal">&nbsp;&nbsp;普通邮件</option>
+          <option value="priority:low">&nbsp;&nbsp;缓慢邮件</option>
+          <option value="none" class="SelOptLine">-------------</option>
+          <option value="label0:1" class="fnt_Mark1">&nbsp;&nbsp;重要邮件</option>
+          <option value="label0:2" class="fnt_Mark2">&nbsp;&nbsp;公司邮件</option>
+          <option value="label0:3" class="fnt_Mark3">&nbsp;&nbsp;业务邮件</option>
+          <option value="label0:4" class="fnt_Mark4">&nbsp;&nbsp;资讯邮件</option>
+          <option value="label0:5" class="fnt_Mark5">&nbsp;&nbsp;亲友邮件</option>
+          <option value="label0:6" class="fnt_Mark6">&nbsp;&nbsp;同学邮件</option>
+          <option value="label0:7" class="fnt_Mark7">&nbsp;&nbsp;休闲邮件</option>
+          <option value="label0:8" class="fnt_Mark8">&nbsp;&nbsp;趣闻邮件</option>
+          <option value="label0:15" class="fnt_Mark15">&nbsp;&nbsp;杂项邮件</option>
+        </select>
+        <div class="Extra"> <span class="Txt"><span class="Unable">首页</span>&nbsp;&nbsp; <span class="Unable">上页</span>&nbsp;&nbsp; <span class="Unable">下页</span>&nbsp;&nbsp; <span class="Unable">末页</span> </span>
+          <select class="SelA" style="margin-right:0px">
+            <option value="1" selected >1/1</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="Ibx_Main_Wp">
+        <table id="oTableHead" class="Ibx_gTable F2Img Ibx_gTable_TT">
+          <tbody>
+            <tr>
+              <th class="Ibx_Th_F"></th>
+              <th class="Ibx_Th_Chkbx"><input id="oFormCheckAll" type="checkbox" title="全选/不选　本页所有邮件"/></th>
+              <th class="Ibx_Th_icoInfo"><b class="icoIbx" title='邮件类型'></b></th>
+              <th class="Ibx_Th_From"><a href="#" title="点击可按此排序">发件人</a></th>
+              <th class="Ibx_Th_icoFlag"><b class="icoIbx" title='邮件标签'></b></th>
+              <th class="Ibx_Th_Subject"><a href="#" title="点击可按此排序">主题</a></th>
+              <th class="Ibx_Th_Date"><a href="#" title="点击可按此排序">日期<b class="icoIbx icoDown"></b></b></a></th>
+              <th class="Ibx_Th_icoATCM"><b class="icoIbx" title='附件标识'></b></th>
+              <th class="Ibx_Th_Size"><a href="#" title="点击可按此排序">大小</a></th>
+            </tr>
+          <tbody>
+        </table>
+        <div class="Ibx_Lst_dWp dWpOpen">
+          <h4 class="Ibx_Lst_dTT" action="list"><a action="toggle" href="javascript:void(0)" title="展开/隐藏" class="icoIbx"></a><span class="Txt">日期：今天&nbsp;<span style="display:none">(<a href="javascript:void(0)" title="
+选中该组所有邮件" key="oTableCOUNT0" action="select"><span id="oSpanCOUNT0">10</span>封</a>)</span></span></h4>
+          <table class="Ibx_gTable Ibx_gTable_Con" id="oTableCOUNT0" action="list">
+            <tbody>
+              <tr class="I_Mark0">
+                <td class="Ibx_Td_F">&nbsp;</td>
+                <td class="Ibx_Td_Chkbx"><input name="mid" read="true" index="0" time="1252068060000"  type="checkbox" title="选择/不选"/></td>
+                <td class="Ibx_Td_icoInfo"><b class="icoIbx icoSlow" title="缓慢邮件"></b></td>
+                <td class="Ibx_Td_From" ><a href="mail.html"> Kaekey </a></td>
+                <td class="Ibx_Td_icoFlag" title="未分类"><b class="icoIbx"></b></td>
+                <td class="Ibx_Td_Subject" ><a href="mail.html">欢迎您使用焜安信息邮件模拟登陆系统！</a
+  ></td>
+                <td class="Ibx_Td_Date" title="">9/4</td>
+                <td class="Ibx_Td_icoATCM"></td>
+                <td class="Ibx_Td_Size"><span title="5637 字节">5.5K</span></td>
+              </tr>
+              <tr class="I_Mark0">
+                <td class="Ibx_Td_F">&nbsp;</td>
+                <td class="Ibx_Td_Chkbx"><input name="mid" read="true" index="1" time="1251441900000" type="checkbox" title="选择/不选"/></td>
+                <td class="Ibx_Td_icoInfo"></td>
+                <td class="Ibx_Td_From"><a href="mail.html">焜安信息</a></td>
+                <td class="Ibx_Td_icoFlag" title="未分类"><b class="icoIbx"></b></td>
+                <td class="Ibx_Td_Subject" title="test"><a href="mail.html">邮件测试</a
+  ></td>
+                <td class="Ibx_Td_Date" title="">14:45</td>
+                <td class="Ibx_Td_icoATCM"></td>
+                <td class="Ibx_Td_Size"><span title="1050 字节">1K</span></td>
+              </tr>
+            <tbody>
+          </table>
+        </div>
+        <h4 class="Ibx_Lst_bExtra" id="oH4Check">选择：<a href="javascript:void(0)" type="all">全部</a>&nbsp;-&nbsp;<a href="javascript:void(0)" type="unread">未读</a>&nbsp;-&nbsp;<a href="
+javascript:void(0)" type="read">已读</a>&nbsp;-&nbsp;<a href="javascript:void(0)" type="reverse">反选</a>&nbsp;-&nbsp;<a href="javascript:void(0)" type="no">不选</a></h4>
+      </div
+>
+
+      <div class="gToolbar gTbrBtm">
+        <input type="button" class="Btn BtnNml ImpBtn" value="删 除"/>
+        <input type="button" class="Btn BtnNml" value="举报垃圾邮件"/>
+        <select class="Sel">
+          <option value="none" selected="true">标记为...</option>
+          <option value="read:true">&nbsp;&nbsp;已读邮件</option>
+          <option value="read:false">&nbsp;&nbsp;未读邮件</option>
+          <option value="none" class="SelOptLine">-------------</option>
+          <option value="priority:1">&nbsp;&nbsp;紧急邮件</option>
+          <option value="priority:3">&nbsp;&nbsp;普通邮件</option>
+          <option value="priority:5">&nbsp;&nbsp;缓慢邮件</option>
+          <option value="none" class="SelOptLine">-------------</option>
+          <option value="label0:1" class="fnt_Mark1">&nbsp;&nbsp;重要邮件</option>
+          <option value="label0:2" class="fnt_Mark2">&nbsp;&nbsp;公司邮件</option>
+          <option value="label0:3" class="fnt_Mark3">&nbsp;&nbsp;业务邮件</option>
+          <option value="label0:4" class="fnt_Mark4">&nbsp;&nbsp;资讯邮件</option>
+          <option value="label0:5" class="fnt_M ark5">&nbsp;&nbsp;亲友邮件</option>
+          <option value="label0:6" class="fnt_Mark6">&nbsp;&nbsp;同学邮件</option>
+          <option value="label0:7" class="fnt_Mark7">&nbsp;&nbsp;休闲邮件</option>
+          <option value="label0:8" class="fnt_Mark8">&nbsp;&nbsp;趣闻邮件</option>
+          <option value="label0:15" class="fnt_Mark15">&nbsp;&nbsp;杂项邮件</option>
+          <option value="none" class="SelOptLine">-------------</option>
+          <option value="label0:0">&nbsp;&nbsp;取消标签</option>
+        </select>
+        <select class="Sel">
+          <option value="none" selected="true">移动到...</option>
+          <option value="1">&nbsp;&nbsp;收件箱</option>
+          <option value="5">&nbsp;&nbsp;垃圾邮件</option>
+          <option value="200000">&nbsp;&nbsp;已接收邮件</option>
+          <option value="2">&nbsp;&nbsp;草稿箱</option>
+          <option value="3">&nbsp;&nbsp;已发送邮件</option>
+          <option value="4">&nbsp;&nbsp;垃圾箱</option>
+          <option value="none" class="SelOptLine">-------------</option>
+        </select>
+        <select class="Sel">
+          <option value="none" selected="true">查看...</option>
+          <option value="null">&nbsp;&nbsp;全部邮件</option>
+          <option value="none" class="SelOptLine">-------------</option>
+          <option value="read:false">&nbsp;&nbsp;未读邮件</option>
+          <option value="read:true">&nbsp;&nbsp;已读邮件</option>
+          <option value="replied:true">&nbsp;&nbsp;已回复</option>
+          <option value="forwarded:true">&nbsp;&nbsp;已转发</option>
+          <option value="none" class="SelOptLine">-------------</option>
+          <option value="priority:high">&nbsp;&nbsp;紧急邮件</option>
+          <option value="priority:normal">&nbsp;&nbsp;普通邮件</option>
+          <option value="priority:low">&nbsp;&nbsp;缓慢邮件</option>
+          <option value="none" class="SelOptLine">-------------</option>
+          <option value="label0:1" class="fnt_Mark1">&nbsp;&nbsp;重要邮件</option>
+          <option value="label0:2" class="fnt_Mark2">&nbsp;&nbsp;公司邮件</option>
+          <option value="label0:3" class="fnt_Mark3">&nbsp;&nbsp;业务邮件</option>
+          <option value="label0:4" class="fnt_Mark4">&nbsp;&nbsp;资讯邮件</option>
+          <option value="label0:5" class="fnt_Mark5">&nbsp;&nbsp;亲友邮件</option>
+          <option value="label0:6" class="fnt_Mark6">&nbsp;&nbsp;同学邮件</option>
+          <option value="label0:7" class="fnt_Mark7">&nbsp;&nbsp;休闲邮件</option>
+          <option value="label0:8" class="fnt_Mark8">&nbsp;&nbsp;趣闻邮件</option>
+          <option value="label0:15" class="fnt_Mark15">&nbsp;&nbsp;杂项邮件</option>
+        </select>
+        <div class="Extra"> <span class="Txt"><span class="Unable">首页</span>&nbsp;&nbsp; <span class="Unable">上页</span>&nbsp;&nbsp; <span class="Unable">下页</span>&nbsp;&nbsp; <span class="Unable">末页</span> </span>
+          <select action="page" class="SelA" style="margin-right:0px" >
+            <option value="1" selected >1/1</option>
+          </select>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</form>
+</body>
+</html>

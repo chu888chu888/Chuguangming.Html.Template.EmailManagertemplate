@@ -1,0 +1,156 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>焜安密保邮件登录系统演示</title>
+<link href="images/zh-cn/globle_v1.css" rel="stylesheet" type="text/css">
+<link href="images/zh-cn/read.css" rel="stylesheet" type="text/css">
+<link href="images/zh-cn/skin_blue.css" rel="stylesheet" type="text/css" id="lnkSkin" />
+</head>
+<body class="All_C_Page read">
+<div class="ContentWp">
+  <div class="ContentThemeWp">
+    <div class="gToolbar gTbrTop">
+      <input type="button" value="返 回" onClick="location.href='box.html';" class="Btn BtnNml ImpBtn" onMouseDown="this.className='Btn BtnHv BtnDw ImpBtn'" hidefocus="ture" onMouseOver="this.className='Btn BtnHv ImpBtn';" onMouseOut="this.className='Btn BtnNml ImpBtn';">
+      <form id="messageForm" method="post" action="#">
+        <input type="button" class="Btn BtnNml" value="回 复" onMouseDown="this.className='Btn BtnHv BtnDw'" onMouseOver="this.className='Btn BtnHv';" onMouseOut="this.className='Btn BtnNml';" name="reply"/>
+        <input type="button" class="Btn BtnNml" value="回复全部" onMouseDown="this.className='Btn BtnHv BtnDw'" onMouseOver="this.className='Btn BtnHv';" onMouseOut="this.className='Btn BtnNml';" name="replyall"/>
+        <input type="button" class="Btn BtnNml" value="转 发" onMouseDown="this.className='Btn BtnHv BtnDw'" onMouseOver="this.className='Btn BtnHv';" onMouseOut="this.className='Btn BtnNml';" name="forward"/>
+        <input type="button" class="Btn BtnNml" value="删　除" onMouseDown="this.className='Btn BtnHv BtnDw'" onMouseOver="this.className='Btn BtnHv';" onMouseOut="this.className='Btn BtnNml';" name="delete"/>
+        <select name="movetofolder" class="Sel" style="width:120px">
+          <option value="">移动到...</option>
+          <option value="5">&nbsp;&nbsp;垃圾邮件</option>
+          <option value="200000">&nbsp;&nbsp;已接收邮件</option>
+          <option value="2">&nbsp;&nbsp;草稿箱</option>
+          <option value="3">&nbsp;&nbsp;已发送邮件</option>
+          <option value="4">&nbsp;&nbsp;垃圾箱</option>
+          <option value="none" class="SelOptLine">-------------</option>
+        </select>
+        <select name="morefunc" id='morefunc' class="Sel" style="width:120px">
+          <option value="">更多...</option>
+          <option value="print">&nbsp;&nbsp;&nbsp;打印邮件</option>
+          <option value="none" class="SelOptLine">-------------</option>
+          <option value="none" class="SelInTT">&nbsp;<b>转发</b></option>
+          <option value="forward_transmit">&nbsp;&nbsp;&nbsp;直接转发</option>
+          <option value="forward_attach">&nbsp;&nbsp;&nbsp;附件方式转发</option>
+          <option value="send_again">&nbsp;&nbsp;&nbsp;再次发送</option>
+          <option value="none" class="SelOptLine">-------------</option>
+          <option value="none" class="SelInTT">&nbsp;<b>查看</b></option>
+          <option value="mail_download">&nbsp;&nbsp;&nbsp;邮件下载</option>
+          <option value="view_mailheader">&nbsp;&nbsp;&nbsp;查看信头</option>
+          <option value="view_mailsource">&nbsp;&nbsp;&nbsp;查看原文</option>
+          <option value="view_mailcontent">&nbsp;&nbsp;&nbsp;查看邮件</option>
+          <option value="none" class="SelOptLine">-------------</option>
+          <option value="none" class="SelInTT">&nbsp;<b>选择编码</b></option>
+          <option value="view_GBK" title="简体中文(GB2312)">&nbsp;&nbsp;&nbsp;简体中文(GB2312)</option>
+          <option value="view_BIG5">&nbsp;&nbsp;&nbsp;繁体中文(Big5)</option>
+          <option value="view_UTF-8">&nbsp;&nbsp;&nbsp;Unicode(UTF-8)</option>
+          <option value="view_ISO-8859-1">&nbsp;&nbsp;&nbsp;西欧(ISO-8859-1)</option>
+          <option value="view_EUC-JP">&nbsp;&nbsp;&nbsp;日文(EUC-JP)</option>
+          <option value="view_ISO-2022-KR">&nbsp;&nbsp;&nbsp;韩文(ISO-2022-KR)</option>
+          </optgroup>
+          <option value="none" class="SelOptLine">-------------</option>
+          <option value="none" class="SelInTT">&nbsp;<b>设置标签</b></option>
+          <option value="label0:1" class="fnt_Mark1">&nbsp;&nbsp;&nbsp;重要邮件</option>
+          <option value="label0:2" class="fnt_Mark2">&nbsp;&nbsp;&nbsp;公司邮件</option>
+          <option value="label0:3" class="fnt_Mark3">&nbsp;&nbsp;&nbsp;业务邮件</option>
+          <option value="label0:4" class="fnt_Mark4">&nbsp;&nbsp;&nbsp;资讯邮件</option>
+          <option value="label0:5" class="fnt_Mark5">&nbsp;&nbsp;&nbsp;亲友邮件</option>
+          <option value="label0:6" class="fnt_Mark6">&nbsp;&nbsp;&nbsp;同学邮件</option>
+          <option value="label0:7" class="fnt_Mark7">&nbsp;&nbsp;&nbsp;休闲邮件</option>
+          <option value="label0:8" class="fnt_Mark8">&nbsp;&nbsp;&nbsp;趣闻邮件</option>
+          <option value="label0:15" class="fnt_Mark15">&nbsp;&nbsp;&nbsp;杂项邮件</option>
+          <option value="label0:0">&nbsp;&nbsp;&nbsp;取消标签</option>
+        </select>
+        <div class="Extra"> [<a href="#">上一封</a>] </div>
+      </form>
+    </div>
+    <div class="gCBgWp">
+      <div class="Read_T">
+        <table class="rTable">
+          <tr>
+            <th>主　题：</th>
+            <td><b class="Read_f1">欢迎您使用焜安信息邮件模拟登陆系统！</b>&nbsp; &nbsp;[<a href="javascript:void(0)" title="">举报垃圾邮件</a>]</td>
+          </tr>
+          <tr>
+            <th>发件人：</th>
+            <td><b>"焜安信息"</b>&nbsp;&lt;<a href="#" class="Read_a" title="给他写信">demo@kaekey.com</a>&gt; &nbsp;&nbsp;[<a href="#" title="添加到通讯录">添加到通讯录</a>] &nbsp;[<a href="#" title="">邮件往来</a>] &nbsp;[<a href="javascript:void(0)" title="拒收">拒收</a>]</td>
+          </tr>
+          <tr>
+            <th>收件人：</th>
+            <td>&quot;焜安信息&quot; &lt;demo@kaekey.com&gt; </td>
+          </tr>
+          <tr>
+            <th>日　期：</th>
+            <td>2009-08-31 09:47:52</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="Read_D">
+      <div class="Read_see" style="margin:0px">
+        <iframe name="mail_content" id="mail_content" width="100%" height="300" name="" src="content.html" frameborder=0>
+        </iframe>
+      </div>
+    </div>
+    <div class="Hr">
+      <hr/>
+    </div>
+    <div class="gToolbar gTbrBtm">
+      <input type="button" value="返 回" onClick="location.href='box.html';" class="Btn BtnNml ImpBtn" onMouseDown="this.className='Btn BtnHv BtnDw ImpBtn'" onMouseOver="this.className='Btn BtnHv ImpBtn';" onMouseOut="this.className='Btn BtnNml ImpBtn';">
+      <form id="messageForm" method="post" action="#">
+        <input type="button" class="Btn BtnNml" value="回 复" onMouseDown="this.className='Btn BtnHv BtnDw'" onMouseOver="this.className='Btn BtnHv';" onMouseOut="this.className='Btn BtnNml';" name="reply"/>
+        <input type="button" class="Btn BtnNml" value="回复全部" onMouseDown="this.className='Btn BtnHv BtnDw'" onMouseOver="this.className='Btn BtnHv';" onMouseOut="this.className='Btn BtnNml';" name="replyall"/>
+        <input type="button" class="Btn BtnNml" value="转 发" onMouseDown="this.className='Btn BtnHv BtnDw'" onMouseOver="this.className='Btn BtnHv';" onMouseOut="this.className='Btn BtnNml';" name="forward"/>
+        <input type="button" class="Btn BtnNml" value="删　除" onMouseDown="this.className='Btn BtnHv BtnDw'" onMouseOver="this.className='Btn BtnHv';" onMouseOut="this.className='Btn BtnNml';" name="delete"/>
+        <select name="movetofolder" class="Sel" style="width:120px">
+          <option value="">移动到...</option>
+          <option value="5">&nbsp;&nbsp;垃圾邮件</option>
+          <option value="200000">&nbsp;&nbsp;已接收邮件</option>
+          <option value="2">&nbsp;&nbsp;草稿箱</option>
+          <option value="3">&nbsp;&nbsp;已发送邮件</option>
+          <option value="4">&nbsp;&nbsp;垃圾箱</option>
+          <option value="none" class="SelOptLine">-------------</option>
+        </select>
+        <select name="morefunc" id="morefunc" class="Sel" style="width:120px">
+          <option value="">更多...</option>
+          <option value="print">&nbsp;&nbsp;&nbsp;打印邮件</option>
+          <option value="none" class="SelOptLine">-------------</option>
+          <option value="none" class="SelInTT">&nbsp;<b>转发</b></option>
+          <option value="forward_transmit">&nbsp;&nbsp;&nbsp;直接转发</option>
+          <option value="forward_attach">&nbsp;&nbsp;&nbsp;附件方式转发</option>
+          <option value="send_again">&nbsp;&nbsp;&nbsp;再次发送</option>
+          <option value="none" class="SelOptLine">-------------</option>
+          <option value="none" class="SelInTT">&nbsp;<b>查看</b></option>
+          <option value="mail_download">&nbsp;&nbsp;&nbsp;邮件下载</option>
+          <option value="view_mailheader">&nbsp;&nbsp;&nbsp;查看信头</option>
+          <option value="view_mailsource">&nbsp;&nbsp;&nbsp;查看原文</option>
+          <option value="view_mailcontent">&nbsp;&nbsp;&nbsp;查看邮件</option>
+          <option value="none" class="SelOptLine">-------------</option>
+          <option value="none" class="SelInTT">&nbsp;<b>选择编码</b></option>
+          <option value="view_GBK" title="简体中文(GB2312)">&nbsp;&nbsp;&nbsp;简体中文(GB2312)</option>
+          <option value="view_BIG5">&nbsp;&nbsp;&nbsp;繁体中文(Big5)</option>
+          <option value="view_UTF-8">&nbsp;&nbsp;&nbsp;Unicode(UTF-8)</option>
+          <option value="view_ISO-8859-1">&nbsp;&nbsp;&nbsp;西欧(ISO-8859-1)</option>
+          <option value="view_EUC-JP">&nbsp;&nbsp;&nbsp;日文(EUC-JP)</option>
+          <option value="view_ISO-2022-KR">&nbsp;&nbsp;&nbsp;韩文(ISO-2022-KR)</option>
+          </optgroup>
+          <option value="none" class="SelOptLine">-------------</option>
+          <option value="none" class="SelInTT">&nbsp;<b>设置标签</b></option>
+          <option value="label0:1" class="fnt_Mark1">&nbsp;&nbsp;&nbsp;重要邮件</option>
+          <option value="label0:2" class="fnt_Mark2">&nbsp;&nbsp;&nbsp;公司邮件</option>
+          <option value="label0:3" class="fnt_Mark3">&nbsp;&nbsp;&nbsp;业务邮件</option>
+          <option value="label0:4" class="fnt_Mark4">&nbsp;&nbsp;&nbsp;资讯邮件</option>
+          <option value="label0:5" class="fnt_Mark5">&nbsp;&nbsp;&nbsp;亲友邮件</option>
+          <option value="label0:6" class="fnt_Mark6">&nbsp;&nbsp;&nbsp;同学邮件</option>
+          <option value="label0:7" class="fnt_Mark7">&nbsp;&nbsp;&nbsp;休闲邮件</option>
+          <option value="label0:8" class="fnt_Mark8">&nbsp;&nbsp;&nbsp;趣闻邮件</option>
+          <option value="label0:15" class="fnt_Mark15">&nbsp;&nbsp;&nbsp;杂项邮件</option>
+          <option value="label0:0">&nbsp;&nbsp;&nbsp;取消标签</option>
+        </select>
+        <div class="Extra"> [<a href="#">上一封</a>] </div>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>
